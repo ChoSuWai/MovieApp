@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_full">
+
+    <RelativeLayout
+        android:id="@+id/rl_movie_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@color/white_full">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignEnd="@id/btn_favorite_movie"
+            app:cardCornerRadius="@dimen/margin_medium_2">
+
+            <ImageView
+                android:id="@+id/iv_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_full"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_backdrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_img_backdrop"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="Mission Impossible - Rogue Nation"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <ImageView
+            android:id="@+id/btn_favorite_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_movie_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:src="@drawable/ic_baseline_favorite_red_36" />
+
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_title"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="2022-06-29"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_release_date"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Action, Thriller"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <LinearLayout
+            android:id="@+id/ll_movie_specific"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_genres"
+            android:layout_alignEnd="@id/btn_favorite_movie"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_title_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_language"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="English"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/view_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_title_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Rating"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_rating"
+                    android:layout_alignStart="@id/tv_title_rating"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="4.9"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/tv_base_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_rating"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_toEndOf="@id/tv_rating"
+                    android:text="/5"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/view_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_title_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Votes"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_votes"
+                    android:layout_alignEnd="@id/tv_title_votes"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="15.6K"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_about_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_movie_specific"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="About Movie"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_about_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_about_movie"
+            android:layout_alignEnd="@id/btn_favorite_movie"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:justificationMode="inter_word"
+            android:lineSpacingMultiplier="1.2"
+            android:text="A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions."
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_title_upcoming_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_about_movie"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="Upcoming Movies"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_upcoming_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_upcoming_movies"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+
