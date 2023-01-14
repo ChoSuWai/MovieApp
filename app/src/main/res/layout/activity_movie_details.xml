@@ -6,7 +6,7 @@
     android:background="@color/white_full">
 
     <RelativeLayout
-        android:id="@+id/rl_movie_details"
+        android:id="@+id/rlMovieDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium_3"
@@ -14,14 +14,14 @@
         android:background="@color/white_full">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_img_backdrop"
+            android:id="@+id/cvImgBackdrop"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:layout_alignEnd="@id/btn_favorite_movie"
+            android:layout_alignEnd="@id/btnFavoriteMovie"
             app:cardCornerRadius="@dimen/margin_medium_2">
 
             <ImageView
-                android:id="@+id/iv_backdrop"
+                android:id="@+id/ivBackdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white_full"
@@ -31,10 +31,10 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_movie_title"
+            android:id="@+id/tvMovieTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cv_img_backdrop"
+            android:layout_below="@id/cvImgBackdrop"
             android:layout_marginTop="@dimen/margin_medium_2"
             android:text="Mission Impossible - Rogue Nation"
             android:textColor="@color/primary_text"
@@ -43,40 +43,40 @@
             android:typeface="sans" />
 
         <ImageView
-            android:id="@+id/btn_favorite_movie"
+            android:id="@+id/btnFavoriteMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/tv_movie_title"
+            android:layout_alignTop="@id/tvMovieTitle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/margin_medium_3"
             android:src="@drawable/ic_baseline_favorite_red_36" />
 
         <TextView
-            android:id="@+id/tv_release_date"
+            android:id="@+id/tvReleaseDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_movie_title"
+            android:layout_below="@id/tvMovieTitle"
             android:layout_marginTop="@dimen/margin_medium"
             android:text="2022-06-29"
             android:textColor="@color/secondary_text"
             android:textSize="@dimen/text_regular" />
 
         <TextView
-            android:id="@+id/tv_genres"
+            android:id="@+id/tvGenres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_release_date"
+            android:layout_below="@id/tvReleaseDate"
             android:layout_marginTop="@dimen/margin_medium"
             android:text="Action, Thriller"
             android:textColor="@color/secondary_text"
             android:textSize="@dimen/text_regular" />
 
         <LinearLayout
-            android:id="@+id/ll_movie_specific"
+            android:id="@+id/llMovieSpecific"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_genres"
-            android:layout_alignEnd="@id/btn_favorite_movie"
+            android:layout_below="@id/tvGenres"
+            android:layout_alignEnd="@id/btnFavoriteMovie"
             android:layout_marginTop="@dimen/margin_xxlarge"
             android:orientation="horizontal">
 
@@ -86,7 +86,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/tv_title_language"
+                    android:id="@+id/tvTitleLanguage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Language"
@@ -94,10 +94,10 @@
                     android:textSize="@dimen/text_regular" />
 
                 <TextView
-                    android:id="@+id/tv_language"
+                    android:id="@+id/tvLanguage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_title_language"
+                    android:layout_below="@id/tvTitleLanguage"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:text="English"
                     android:textColor="@color/primary"
@@ -119,7 +119,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/tv_title_rating"
+                    android:id="@+id/tvTitleRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -128,11 +128,11 @@
                     android:textSize="@dimen/text_regular" />
 
                 <TextView
-                    android:id="@+id/tv_rating"
+                    android:id="@+id/tvRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_title_rating"
-                    android:layout_alignStart="@id/tv_title_rating"
+                    android:layout_below="@id/tvTitleRating"
+                    android:layout_alignStart="@id/tvTitleRating"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:text="4.9"
                     android:textColor="@color/primary"
@@ -141,12 +141,12 @@
                     android:typeface="sans" />
 
                 <TextView
-                    android:id="@+id/tv_base_rating"
+                    android:id="@+id/tvBaseRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_title_rating"
+                    android:layout_below="@id/tvTitleRating"
                     android:layout_marginTop="@dimen/margin_medium_2"
-                    android:layout_toEndOf="@id/tv_rating"
+                    android:layout_toEndOf="@id/tvRating"
                     android:text="/5"
                     android:textColor="@color/primary"
                     android:textSize="@dimen/text_regular_2x"
@@ -167,7 +167,7 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/tv_title_votes"
+                    android:id="@+id/tvTitleVotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -176,11 +176,11 @@
                     android:textSize="@dimen/text_regular" />
 
                 <TextView
-                    android:id="@+id/tv_votes"
+                    android:id="@+id/tvVotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_title_votes"
-                    android:layout_alignEnd="@id/tv_title_votes"
+                    android:layout_below="@id/tvTitleVotes"
+                    android:layout_alignEnd="@id/tvTitleVotes"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:text="15.6K"
                     android:textColor="@color/primary"
@@ -193,10 +193,10 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_title_about_movie"
+            android:id="@+id/tvTitleAboutMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_movie_specific"
+            android:layout_below="@id/llMovieSpecific"
             android:layout_marginTop="@dimen/margin_xxlarge"
             android:text="About Movie"
             android:textColor="@color/primary_text"
@@ -204,11 +204,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_about_movie"
+            android:id="@+id/tvAboutMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_title_about_movie"
-            android:layout_alignEnd="@id/btn_favorite_movie"
+            android:layout_below="@id/tvTitleAboutMovie"
+            android:layout_alignEnd="@id/btnFavoriteMovie"
             android:layout_marginTop="@dimen/margin_medium_2"
             android:justificationMode="inter_word"
             android:lineSpacingMultiplier="1.2"
@@ -217,10 +217,10 @@
             android:textSize="@dimen/text_regular" />
 
         <TextView
-            android:id="@+id/tv_title_upcoming_movies"
+            android:id="@+id/tvTitleUpcomingMovies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_about_movie"
+            android:layout_below="@id/tvAboutMovie"
             android:layout_marginTop="@dimen/margin_xxlarge"
             android:text="Upcoming Movies"
             android:textColor="@color/primary_text"
@@ -228,10 +228,10 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_upcoming_movies"
+            android:id="@+id/rvUpcomingMovies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_title_upcoming_movies"
+            android:layout_below="@id/tvTitleUpcomingMovies"
             android:layout_marginTop="@dimen/margin_medium_2"
             android:layout_marginBottom="@dimen/margin_medium_2"
             android:orientation="horizontal" />
