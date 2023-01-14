@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Yote Shin</string>
+
+    <string name="lbl_login">Login ၀င်ရန်</string>
+    <string name="lbl_register">Register ပြုလုပ်ရန်</string>
+    <string name="launcher_name">Yote Shin</string>
 </resources>

@@ -36,12 +36,7 @@
 
 
     <!--App Specific-->
-    <dimen name="publication_logo_width">120dp</dimen>
-    <dimen name="publication_logo_height">90dp</dimen>
-    <dimen name="news_details_appbar_height">300dp</dimen>
     <dimen name="left_menu_width">320dp</dimen>
-    <dimen name="logo_size">80dp</dimen>
     <dimen name="login_user_info_height">220dp</dimen>
-    <dimen name="icon_dimen_regular">40dp</dimen>
 
 </resources>
