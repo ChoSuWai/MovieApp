@@ -11,7 +11,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/vh_pMovies_cardView_height"
         android:layout_weight="1"
         android:background="@color/white_full"
         app:cardCornerRadius="@dimen/margin_medium"
@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/ivMoviePoster"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="@dimen/vh_pMovies_cardView_height"
             android:scaleType="centerCrop"
             android:src="@drawable/img_placeholder" />
 
@@ -28,10 +28,10 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/vh_pMovies_cardView_height"
         android:layout_weight="2"
         android:orientation="vertical"
-        android:weightSum="15">
+        android:weightSum="18">
 
         <TextView
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="13"
+            android:layout_weight="16"
             android:background="@drawable/rounded_border_movies_itemview"
             android:backgroundTint="@color/movie_item_view_bgcolor">
 
@@ -51,10 +51,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium_2"
-                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
                 android:text="Minions"
                 android:textColor="@color/primary_text"
-                android:textSize="@dimen/text_regular_2x"
+                android:textSize="@dimen/text_regular"
                 android:textStyle="bold" />
 
             <TextView
@@ -65,28 +66,7 @@
                 android:layout_alignStart="@id/tvMovieTitle"
                 android:layout_marginTop="@dimen/margin_medium_2"
                 android:text="Animation, Adventure"
-                android:textSize="@dimen/text_regular" />
-
-            <TextView
-                android:id="@+id/tvRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvGenres"
-                android:layout_alignStart="@id/tvMovieTitle"
-                android:text="4"
-                android:textColor="@color/primary"
-                android:textSize="@dimen/text_heading_1x"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvBaseRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvGenres"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:layout_toEndOf="@id/tvRating"
-                android:text="/5"
-                android:textSize="@dimen/text_regular" />
+                android:textSize="@dimen/text_small" />
 
             <androidx.appcompat.widget.AppCompatRatingBar
                 android:id="@+id/rbMovies"
@@ -94,9 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvGenres"
-                android:layout_marginStart="@dimen/margin_medium_2"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:layout_toEndOf="@id/tvBaseRating"
+                android:layout_alignStart="@id/tvMovieTitle"
+                android:layout_alignBottom="@id/btnFavorite"
                 android:isIndicator="true"
                 android:numStars="5"
                 android:progressBackgroundTint="@color/black_full"
@@ -105,16 +84,17 @@
                 android:stepSize="0.1" />
 
             <ImageView
-                android:id="@+id/btn_favorite"
+                android:id="@+id/btnFavorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/tvMovieTitle"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
                 android:clickable="true"
                 android:foreground="@drawable/ripple"
                 android:padding="@dimen/margin_small"
-                android:src="@drawable/ic_baseline_favorite_red_24" />
+                android:src="@drawable/ic_baseline_favorite_primary_24" />
 
         </RelativeLayout>
 

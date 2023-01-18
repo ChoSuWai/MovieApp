@@ -38,5 +38,6 @@
     <!--App Specific-->
     <dimen name="left_menu_width">320dp</dimen>
     <dimen name="login_user_info_height">220dp</dimen>
+    <dimen name="vh_pMovies_cardView_height">180dp</dimen>
 
 </resources>
