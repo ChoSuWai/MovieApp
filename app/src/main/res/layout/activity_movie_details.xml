@@ -49,7 +49,7 @@
             android:layout_alignTop="@id/tvMovieTitle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/margin_medium_3"
-            android:src="@drawable/ic_baseline_favorite_red_36" />
+            android:src="@drawable/ic_baseline_favorite_primary_36" />
 
         <TextView
             android:id="@+id/tvReleaseDate"

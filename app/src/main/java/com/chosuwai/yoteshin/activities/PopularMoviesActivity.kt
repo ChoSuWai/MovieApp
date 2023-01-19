@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chosuwai.yoteshin.R
 import com.chosuwai.yoteshin.adapters.PopularMoviesAdapter
 import com.chosuwai.yoteshin.data.models.MoviesAppModel
+import com.chosuwai.yoteshin.data.vos.PopularMoviesVO
 import com.chosuwai.yoteshin.delegates.MoviesDelegate
 import com.chosuwai.yoteshin.events.DataEvent
 import kotlinx.android.synthetic.main.activity_popular_movies.*
@@ -29,12 +30,12 @@ class PopularMoviesActivity : BaseActivity(), MoviesDelegate {
         swipeRefreshLayout.isRefreshing = true
     }
 
-    override fun onTapMovie() {
-        val intent = MovieDetailsActivity.newIntent(applicationContext)
+    override fun onTapMovie(movie: PopularMoviesVO) {
+        val intent = MovieDetailsActivity.newIntent(applicationContext, movie.id)
         startActivity(intent)
     }
 
-    override fun onTapFavorite() {
+    override fun onTapFavorite(movie: PopularMoviesVO) {
 
     }
 

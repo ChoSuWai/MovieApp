@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.chosuwai.yoteshin.R
+import com.chosuwai.yoteshin.data.vos.GenresVO
 import com.chosuwai.yoteshin.data.vos.PopularMoviesVO
 import com.chosuwai.yoteshin.delegates.MoviesDelegate
 import com.chosuwai.yoteshin.views.holders.PopularMoviesViewHolder
@@ -38,4 +39,5 @@ class PopularMoviesAdapter(context: Context, private val mDelegate: MoviesDelega
         mMoviesList = data
         notifyDataSetChanged()
     }
+
 }

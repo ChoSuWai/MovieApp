@@ -1,9 +1,10 @@
-package com.chosuwai.yoteshin.network.responses
+package com.chosuwai.yoteshin.network
 
 import android.util.Log
 import com.chosuwai.yoteshin.events.DataEvent
 import com.chosuwai.yoteshin.events.ErrorEvent
-import com.chosuwai.yoteshin.network.MoviesApi
+import com.chosuwai.yoteshin.network.responses.GenresResponse
+import com.chosuwai.yoteshin.network.responses.PopularMoviesResponse
 import com.chosuwai.yoteshin.utils.MoviesAppConstants
 import com.google.gson.Gson
 import okhttp3.OkHttpClient

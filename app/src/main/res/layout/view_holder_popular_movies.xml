@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginStart="@dimen/margin_medium_2"
     android:layout_marginTop="@dimen/margin_medium_2"
     android:layout_marginEnd="@dimen/margin_medium_2"
@@ -22,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/vh_pMovies_cardView_height"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_placeholder" />
+            tools:src="@drawable/img_placeholder" />
 
     </androidx.cardview.widget.CardView>
 
@@ -31,7 +32,7 @@
         android:layout_height="@dimen/vh_pMovies_cardView_height"
         android:layout_weight="2"
         android:orientation="vertical"
-        android:weightSum="18">
+        android:weightSum="15">
 
         <TextView
             android:layout_width="match_parent"
@@ -42,7 +43,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="16"
+            android:layout_weight="13"
             android:background="@drawable/rounded_border_movies_itemview"
             android:backgroundTint="@color/movie_item_view_bgcolor">
 
@@ -53,7 +54,7 @@
                 android:layout_marginStart="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_medium_2"
                 android:layout_marginEnd="@dimen/margin_medium_2"
-                android:text="Minions"
+                tools:text="Minions"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_regular"
                 android:textStyle="bold" />
@@ -64,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvMovieTitle"
                 android:layout_alignStart="@id/tvMovieTitle"
-                android:layout_marginTop="@dimen/margin_medium_2"
-                android:text="Animation, Adventure"
+                android:layout_marginTop="@dimen/margin_medium"
+                tools:text="Animation, Adventure"
                 android:textSize="@dimen/text_small" />
 
             <androidx.appcompat.widget.AppCompatRatingBar
@@ -75,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvGenres"
                 android:layout_alignStart="@id/tvMovieTitle"
-                android:layout_alignBottom="@id/btnFavorite"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:isIndicator="true"
                 android:numStars="5"
                 android:progressBackgroundTint="@color/black_full"

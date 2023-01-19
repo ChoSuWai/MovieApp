@@ -1,9 +1,11 @@
 package com.chosuwai.yoteshin.views.holders
 
+import android.util.Log
 import android.view.View
 import com.bumptech.glide.Glide
 import com.chosuwai.yoteshin.R
 import com.chosuwai.yoteshin.data.models.MoviesAppModel
+import com.chosuwai.yoteshin.data.vos.GenresVO
 import com.chosuwai.yoteshin.data.vos.PopularMoviesVO
 import com.chosuwai.yoteshin.delegates.MoviesDelegate
 import com.chosuwai.yoteshin.utils.MoviesAppConstants
@@ -12,11 +14,11 @@ import kotlinx.android.synthetic.main.view_holder_popular_movies.view.*
 class PopularMoviesViewHolder<W>(itemView: View, private val mDelegate: MoviesDelegate) :
     BaseViewHolder<PopularMoviesVO>(itemView) {
 
-    private var genresList: List<String> = ArrayList()
     private var genresName: String = ""
+    private var rating: Float = 3.5f
 
     override fun onClick(v: View?) {
-        mDelegate.onTapMovie()
+        mDelegate.onTapMovie(mData)
     }
 
     override fun setData(data: PopularMoviesVO) {
@@ -29,20 +31,19 @@ class PopularMoviesViewHolder<W>(itemView: View, private val mDelegate: MoviesDe
             .into(itemView.ivMoviePoster)
 
         itemView.tvMovieTitle.text = data.title
-        itemView.rbMovies.rating = ((data.voteAverage) / 2).toFloat()
+
+        rating = ((data.voteAverage) / 2).toFloat()
+        itemView.rbMovies.rating = rating
+        Log.d("PopularMoviesViewHolder", "Rating : $rating")
 
         for (id in data.genreIds) {
-            genresList = genresList + MoviesAppModel.getInstance().getGenresById(id)
+            genresName = genresName + " " + MoviesAppModel.getInstance().getGenresById(id)
         }
+        genresName = genresName.drop(1)
+        Log.d("PopularMoviesViewHolder", "Genres Name : $genresName")
 
-        /*
-        for (name in genresList) {
-            genresName = genresName + " " + name
-        }
         itemView.tvGenres.text = genresName
-         */
-
-        itemView.tvGenres.text = genresList.toString()
+        genresName = ""
 
     }
 }
